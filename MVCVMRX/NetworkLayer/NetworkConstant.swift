@@ -10,21 +10,11 @@ import Alamofire
 struct Constants {
     
     //The API's base URL
-    static let baseUrl = "http://staging.sary.to/api/"
+    static let baseUrl = "https://staging.sary.to/api/"
     static let Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjgxNTEyLCJ1c2VyX3Bob25lIjoiOTY2NTkxMTIyMzM0In0.phRQP0e5yQrCVfZiN4YlkI8NhXRyqa1fGRx5rvrEv0o"
     static let applanuage = "en"
 
 
-    
-    //The header fields
-//    enum HttpHeaderField: String {
-//        case authorization = "token \(Token ?? "")"
-//        case appVersion = "5.5.0.0.0"
-//        case acceptLanguage = ((Constants.applanuage) ?? "")
-//        case deviceType = "ios"
-//        case Platform = "FLAGSHIP"
-//    }
-//
     enum HttpHeaderField: String {
         case authorization
         case appVersion
@@ -35,7 +25,7 @@ struct Constants {
        func HttpHeader() ->  String {
            switch self {
            case .authorization:
-               return "token \(Token)"
+               return "token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjgxNTEyLCJ1c2VyX3Bob25lIjoiOTY2NTkxMTIyMzM0In0.phRQP0e5yQrCVfZiN4YlkI8NhXRyqa1fGRx5rvrEv0o"
            case .appVersion:
                return "5.5.0.0.0"
            case .acceptLanguage:

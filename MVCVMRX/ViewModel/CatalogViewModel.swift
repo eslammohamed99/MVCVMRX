@@ -13,32 +13,38 @@ class CatalogViewModel {
     
     private let disposeBag = DisposeBag()
     let catalogArray = BehaviorRelay<[CatalogResult]>(value: [])
-//    let refreshControlAction = PublishSubject<Void>()
+    let getDataAction = PublishSubject<Void>()
+    let refreshControlAction = PublishSubject<Void>()
 //    let refreshControlCompelted = PublishSubject<Void>()
 //    private var isRefreshRequstStillResume = false
 
-//    init() {
-//           bannerControllerRefreshbind()
-//       }
+    init() {
+           bannerControllerRefreshbind()
+       }
     
-//    private func bannerControllerRefreshbind() {
-//
-//           refreshControlAction.subscribe { [weak self] _ in
-//               self?.refreshControlTriggered()
-//           }
-//           .disposed(by: disposeBag)
-//       }
+    private func bannerControllerRefreshbind() {
+        
+        getDataAction.subscribe { [weak self] _ in
+            self?.fetchCatalogData(isRefreshControl: false)
+        }
+        .disposed(by: disposeBag)
+
+           refreshControlAction.subscribe { [weak self] _ in
+               self?.refreshControlTriggered()
+           }
+           .disposed(by: disposeBag)
+       }
     
     private func refreshControlTriggered() {
         catalogArray.accept([])
-        fetchBannerData(isRefreshControl: true)
+        fetchCatalogData(isRefreshControl: true)
     }
     
-    private func fetchBannerData(isRefreshControl: Bool) {
+    private func fetchCatalogData(isRefreshControl: Bool) {
 //        if isRefreshRequstStillResume { return }
 //        self.isRefreshRequstStillResume = isRefreshControl
         
-        fetchBannerList() { Result,Error  in
+        fetchCatalogList() { Result,Error  in
             if let res = Result{
             self.catalogArray.accept(res)
 //            self.isRefreshRequstStillResume = false
@@ -51,7 +57,7 @@ class CatalogViewModel {
            
        }
     
-    private func fetchBannerList(completion: @escaping ([CatalogResult]?,String?) -> ()) {
+    private func fetchCatalogList(completion: @escaping ([CatalogResult]?,String?) -> ()) {
         APIClient.getCatalogData().observe(on: MainScheduler.instance)
             .subscribe(onNext: { catalogList in
                 

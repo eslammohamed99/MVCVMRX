@@ -23,6 +23,13 @@
 		77C41E6127E7C22300D4CEFF /* MVCVMRXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C41E6027E7C22300D4CEFF /* MVCVMRXTests.swift */; };
 		77C41E6B27E7C22300D4CEFF /* MVCVMRXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C41E6A27E7C22300D4CEFF /* MVCVMRXUITests.swift */; };
 		77C41E6D27E7C22300D4CEFF /* MVCVMRXUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C41E6C27E7C22300D4CEFF /* MVCVMRXUITestsLaunchTests.swift */; };
+		77D35BEF27E961720075A55A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D35BEE27E961720075A55A /* MainViewController.swift */; };
+		77D35BF127E9619E0075A55A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D35BF027E9619E0075A55A /* MainView.swift */; };
+		77D35BF927E966860075A55A /* MainCellSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D35BF727E966860075A55A /* MainCellSection.swift */; };
+		77D35BFA27E966860075A55A /* MainCellSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D35BF827E966860075A55A /* MainCellSection.xib */; };
+		77D35BFC27E968420075A55A /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D35BFB27E968420075A55A /* Extentions.swift */; };
+		77D35BFF27E9694B0075A55A /* itemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D35BFD27E9694B0075A55A /* itemCellView.swift */; };
+		77D35C0027E9694B0075A55A /* itemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D35BFE27E9694B0075A55A /* itemCellView.xib */; };
 		F30C123637A758376979C7B2 /* Pods_MVCVMRX_MVCVMRXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647E5A62304C12A904BA4FDF /* Pods_MVCVMRX_MVCVMRXUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,13 @@
 		77C41E6627E7C22300D4CEFF /* MVCVMRXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCVMRXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C41E6A27E7C22300D4CEFF /* MVCVMRXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCVMRXUITests.swift; sourceTree = "<group>"; };
 		77C41E6C27E7C22300D4CEFF /* MVCVMRXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCVMRXUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		77D35BEE27E961720075A55A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		77D35BF027E9619E0075A55A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		77D35BF727E966860075A55A /* MainCellSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellSection.swift; sourceTree = "<group>"; };
+		77D35BF827E966860075A55A /* MainCellSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCellSection.xib; sourceTree = "<group>"; };
+		77D35BFB27E968420075A55A /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		77D35BFD27E9694B0075A55A /* itemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCellView.swift; sourceTree = "<group>"; };
+		77D35BFE27E9694B0075A55A /* itemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemCellView.xib; sourceTree = "<group>"; };
 		80F238F4545EE5944F45CC3E /* Pods-MVCVMRX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCVMRX.debug.xcconfig"; path = "Target Support Files/Pods-MVCVMRX/Pods-MVCVMRX.debug.xcconfig"; sourceTree = "<group>"; };
 		8D223269AD49CE52C73DF585 /* Pods-MVCVMRXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCVMRXTests.release.xcconfig"; path = "Target Support Files/Pods-MVCVMRXTests/Pods-MVCVMRXTests.release.xcconfig"; sourceTree = "<group>"; };
 		A4B72FC4E6B05EF7EB873E60 /* Pods-MVCVMRX-MVCVMRXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVCVMRX-MVCVMRXUITests.release.xcconfig"; path = "Target Support Files/Pods-MVCVMRX-MVCVMRXUITests/Pods-MVCVMRX-MVCVMRXUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +168,8 @@
 		77C41E4827E7C22200D4CEFF /* MVCVMRX */ = {
 			isa = PBXGroup;
 			children = (
+				77D35BEB27E9612D0075A55A /* Controller */,
+				77D35BEA27E961220075A55A /* Views */,
 				773CF49C27E7DD3800C06CB8 /* ViewModel */,
 				773CF49527E7DCB000C06CB8 /* Model */,
 				773CF48E27E7C71200C06CB8 /* NetworkLayer */,
@@ -162,6 +178,7 @@
 				77C41E5227E7C22300D4CEFF /* Assets.xcassets */,
 				77C41E5427E7C22300D4CEFF /* LaunchScreen.storyboard */,
 				77C41E5727E7C22300D4CEFF /* Info.plist */,
+				77D35BFB27E968420075A55A /* Extentions.swift */,
 			);
 			path = MVCVMRX;
 			sourceTree = "<group>";
@@ -181,6 +198,34 @@
 				77C41E6C27E7C22300D4CEFF /* MVCVMRXUITestsLaunchTests.swift */,
 			);
 			path = MVCVMRXUITests;
+			sourceTree = "<group>";
+		};
+		77D35BEA27E961220075A55A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77D35BF227E961A70075A55A /* Cell */,
+				77D35BF027E9619E0075A55A /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77D35BEB27E9612D0075A55A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77D35BEE27E961720075A55A /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77D35BF227E961A70075A55A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				77D35BF727E966860075A55A /* MainCellSection.swift */,
+				77D35BF827E966860075A55A /* MainCellSection.xib */,
+				77D35BFD27E9694B0075A55A /* itemCellView.swift */,
+				77D35BFE27E9694B0075A55A /* itemCellView.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A4552D97E9836797F3DBDCC7 /* Frameworks */ = {
@@ -316,6 +361,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C41E5627E7C22300D4CEFF /* LaunchScreen.storyboard in Resources */,
+				77D35C0027E9694B0075A55A /* itemCellView.xib in Resources */,
+				77D35BFA27E966860075A55A /* MainCellSection.xib in Resources */,
 				77C41E5327E7C22300D4CEFF /* Assets.xcassets in Resources */,
 				77C41E5127E7C22200D4CEFF /* Main.storyboard in Resources */,
 			);
@@ -447,12 +494,17 @@
 			files = (
 				773CF49E27E7DD4B00C06CB8 /* CatalogViewModel.swift in Sources */,
 				773CF49427E7C75300C06CB8 /* NetworkConstant.swift in Sources */,
+				77D35BF927E966860075A55A /* MainCellSection.swift in Sources */,
 				77C41E4A27E7C22200D4CEFF /* AppDelegate.swift in Sources */,
+				77D35BF127E9619E0075A55A /* MainView.swift in Sources */,
 				773CF49027E7C73500C06CB8 /* ApiClient.swift in Sources */,
+				77D35BFF27E9694B0075A55A /* itemCellView.swift in Sources */,
 				773CF49B27E7DD3300C06CB8 /* BannerViewModel.swift in Sources */,
 				773CF49927E7DD1E00C06CB8 /* CatalogModel.swift in Sources */,
+				77D35BFC27E968420075A55A /* Extentions.swift in Sources */,
 				773CF49227E7C74300C06CB8 /* ApiRequest.swift in Sources */,
 				773CF49727E7DD1100C06CB8 /* BannerModel.swift in Sources */,
+				77D35BEF27E961720075A55A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
