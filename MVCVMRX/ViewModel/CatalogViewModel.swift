@@ -58,9 +58,10 @@ class CatalogViewModel {
        }
     
     private func fetchCatalogList(completion: @escaping ([CatalogResult]?,String?) -> ()) {
+        ProgressLoaderHUD.showLoader()
         APIClient.getCatalogData().observe(on: MainScheduler.instance)
             .subscribe(onNext: { catalogList in
-                
+                ProgressLoaderHUD.hideLoader()
                 if let catalogs = catalogList.catalogResult{
                     completion(catalogs, nil)
                     }

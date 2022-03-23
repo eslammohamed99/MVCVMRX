@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MOLH
+import Localize_Swift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             window?.overrideUserInterfaceStyle = .light
         }
-
+        if MOLHLanguage.isArabic(){
+            MOLH.setLanguageTo("ar")
+            Constants.applanuage = "ar"
+        }
+        else{
+            MOLH.setLanguageTo("en")
+            Constants.applanuage = "en"
+        }
+        MOLH.shared.specialKeyWords = ["Cancel","Done"]
         
         return true
     }

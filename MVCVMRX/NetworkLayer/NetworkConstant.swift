@@ -12,7 +12,7 @@ struct Constants {
     //The API's base URL
     static let baseUrl = "https://staging.sary.to/api/"
     static let Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjgxNTEyLCJ1c2VyX3Bob25lIjoiOTY2NTkxMTIyMzM0In0.phRQP0e5yQrCVfZiN4YlkI8NhXRyqa1fGRx5rvrEv0o"
-    static let applanuage = "en"
+    static var applanuage = "en"
 
 
     enum HttpHeaderField: String {

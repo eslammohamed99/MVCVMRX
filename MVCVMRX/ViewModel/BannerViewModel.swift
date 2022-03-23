@@ -13,21 +13,26 @@ class BannerViewModel {
     
     private let disposeBag = DisposeBag()
     let bannerArray = BehaviorRelay<[bannerResult]>(value: [])
-//    let refreshControlAction = PublishSubject<Void>()
+    let getDataAction = PublishSubject<Void>()
 //    let refreshControlCompelted = PublishSubject<Void>()
     private var isRefreshRequstStillResume = false
 
-//    init() {
-//           bannerControllerRefreshbind()
-//       }
+    init() {
+           bannerControllerRefreshbind()
+       }
     
-//    private func bannerControllerRefreshbind() {
-//
+    private func bannerControllerRefreshbind() {
+        
+        getDataAction.subscribe { [weak self] _ in
+            self?.fetchBannerData(isRefreshControl: false)
+        }
+        .disposed(by: disposeBag)
+
 //           refreshControlAction.subscribe { [weak self] _ in
 //               self?.refreshControlTriggered()
 //           }
 //           .disposed(by: disposeBag)
-//       }
+       }
 //
     private func refreshControlTriggered() {
         bannerArray.accept([])
@@ -52,9 +57,10 @@ class BannerViewModel {
        }
     
     private func fetchBannerList(completion: @escaping ([bannerResult]?,String?) -> ()) {
+        ProgressLoaderHUD.showLoader()
         APIClient.getBannerData().observe(on: MainScheduler.instance)
             .subscribe(onNext: { bannersList in
-                
+                ProgressLoaderHUD.hideLoader()
                 if let Banners = bannersList.bannerResult{
                     completion(Banners, nil)
                     }

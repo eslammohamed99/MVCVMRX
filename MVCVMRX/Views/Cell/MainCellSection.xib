@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,22 +16,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="381" height="172"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="btI-RW-6ue">
-                        <rect key="frame" x="10" y="10" width="361" height="152"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="btI-RW-6ue">
+                        <rect key="frame" x="5" y="10" width="396" height="152"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThB-AI-QK5">
-                                <rect key="frame" x="0.0" y="0.0" width="361" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="396" height="17.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r3X-dw-ggi">
-                                <rect key="frame" x="0.0" y="22.5" width="361" height="129.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r3X-dw-ggi">
+                                <rect key="frame" x="0.0" y="22.5" width="396" height="129.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129.5" id="vLA-yc-6i4"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LNE-8q-wC7">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="LNE-8q-wC7">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -40,16 +39,21 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="r3X-dw-ggi" secondAttribute="trailing" id="66V-M3-uKL"/>
+                            <constraint firstItem="r3X-dw-ggi" firstAttribute="leading" secondItem="btI-RW-6ue" secondAttribute="leading" id="9US-el-aRr"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="btI-RW-6ue" secondAttribute="trailing" constant="10" id="R3j-La-ioy"/>
+                    <constraint firstAttribute="trailing" secondItem="btI-RW-6ue" secondAttribute="trailing" constant="-20" id="R3j-La-ioy"/>
                     <constraint firstItem="btI-RW-6ue" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mEg-oc-a1d"/>
-                    <constraint firstItem="btI-RW-6ue" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qxc-jZ-sJE"/>
+                    <constraint firstItem="btI-RW-6ue" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="qxc-jZ-sJE"/>
                     <constraint firstAttribute="bottom" secondItem="btI-RW-6ue" secondAttribute="bottom" constant="10" id="su3-BJ-2be"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="sectionHeight" destination="vLA-yc-6i4" id="sFh-qF-XRx"/>
                 <outlet property="sectionTitle" destination="ThB-AI-QK5" id="Ffo-g3-FPd"/>
@@ -58,9 +62,4 @@
             <point key="canvasLocation" x="181.8840579710145" y="70.3125"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

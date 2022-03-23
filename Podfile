@@ -10,9 +10,9 @@ target 'MVCVMRX' do
   pod 'Alamofire'
   pod 'Toast-Swift'
   pod 'MOLH'
-  pod 'IQKeyboardManagerSwift'
-  pod 'NVActivityIndicatorView'
-  
+  pod 'Kingfisher', '7.0'
+  pod 'SVProgressHUD', '~> 2.2'
+  pod 'Localize-Swift'
   target 'MVCVMRXTests' do
     inherit! :search_paths
     # Pods for testing
